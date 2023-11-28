@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-for c in range(122, 96, -1):
-    if c % 2 != 0:
-        print(chr(c).upper(), end="")
-    else:
-        print(chr(c), end="")
+index = 0
+for letter in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(letter - index)), end="")
+    index = 32 if index == 0 else 0
