@@ -11,21 +11,14 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-    operators = ['+', '-', '*', '/']
+    ops = {"+": add, "-": sub, "*": mul, "/": div}
     operator = argv[2]
 
-    if operator not in operators:
+    if operator not in list(ops.keys()):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
     a = int(argv[1])
     b = int(argv[3])
 
-    if operator == '+':
-        print("{:d} {:s} {:d} = {:d}".format(a, operator, b, add(a, b)))
-    if operator == '-':
-        print("{:d} {:s} {:d} = {:d}".format(a, operator, b, sub(a, b)))
-    if operator == '*':
-        print("{:d} {:s} {:d} = {:d}".format(a, operator, b, mul(a, b)))
-    if operator == '/':
-        print("{:d} {:s} {:d} = {:d}".format(a, operator, b, div(a, b)))
+    print("{} {} {} = {}".format(a, sys.argv[2], b, ops[operator](a, b)))
