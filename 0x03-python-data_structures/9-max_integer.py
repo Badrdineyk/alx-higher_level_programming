@@ -1,4 +1,4 @@
-#!/usr/bun/python3
+#!/usr/bin/python3
 def max_integer(my_list=[]):
     """finds the biggest integer of a list."""
     if not my_list:
