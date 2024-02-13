@@ -16,8 +16,8 @@ Using ``3-say_my_name``
 
 ::
 
-    >>> say_my_name("Badr")
-    My name is Badr
+    >>> say_my_name("Toumani", "Badr")
+    My name is Toumani Badr
 
 ::
 
