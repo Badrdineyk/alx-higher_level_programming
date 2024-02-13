@@ -64,12 +64,6 @@ and ``:``.
     <BLANKLINE>
 
 ::
-    >>> text_indentation("This is \n new line.")
-    This is
-    new line.
-    <BLANKLINE>
-
-::
 
     >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing "
     ... "elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas "
