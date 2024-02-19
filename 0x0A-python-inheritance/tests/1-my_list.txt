@@ -51,22 +51,28 @@ Using ``1-my_list``
 
 ::
 
-    >>> my_list[0] = 4
+    >>> my_list[0] = 5
     >>> print(my_list)
-    [4, 2, 3]
+    [5, 2, 3]
 
 ::
 
-    >>> my_list.remove(4)
+    >>> my_list.remove(5)
     >>> print(my_list)
     [2, 3]
+
+::
+
+    >>> my_list = MyList()
+    >>> print(my_list.print_sorted)
+    <bound method MyList.print_sorted of []>
 
 ::
 
     >>> my_list.print_sorted(1)
     Traceback (most recent call last):
     ...
-    TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 ::
 
@@ -92,17 +98,22 @@ Using ``1-my_list``
 
     >>> my_list = MyList()
     >>> my_list.append("Badr")
-    >>> my_list.append("Alx")
-    >>> my_list.append("School")
     >>> my_list.append("Python")
+    >>> my_list.append("School")
+    >>> my_list.append("Alx")
     >>> my_list.append("Betty")
     >>> print(my_list)
-    ['Badr', 'Alx', 'School', 'Python', 'Betty']
+    ['Badr', 'Python', 'School', 'Alx', 'Betty']
 
 ::
 
     >>> my_list.print_sorted()
     ['Alx', 'Badr', 'Betty', 'Python', 'School']
+
+::
+
+    >>> print(my_list)
+    ['Badr', 'Python', 'School', 'Alx', 'Betty']
 
 ::
 
