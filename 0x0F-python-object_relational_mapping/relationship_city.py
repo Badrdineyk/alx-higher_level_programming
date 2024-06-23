@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-contains the class definition of a City
+Inherits from SQLAlchemy Base and links to the MySQL table cities.
 """
 
 from sqlalchemy import Column, ForeignKey, Integer, String
@@ -13,9 +13,9 @@ class City(Base):
     """Represents a city for a MySQL database.
 
     Attributes:
-        id (str): represents a column of an auto-generated
-        name (sqlalchemy.Integer): represents a column of a string
-        state_id (sqlalchemy.String): represents a column of an integer,
+        id (sqlalchemy.Column): The city's id.
+        name (sqlalchemy.Column): The city's name.
+        state_id (sqlalchemy.Column): The city's state id.
     """
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
